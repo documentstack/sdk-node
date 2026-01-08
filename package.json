@@ -1,0 +1,48 @@
+{
+  "name": "@documentstack/sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js/TypeScript SDK for DocumentStack PDF generation API",
+  "author": "DocumentStack Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/documentstack/sdk-node.git"
+  },
+  "homepage": "https://documentstack.dev/docs/sdk/node",
+  "keywords": ["pdf", "document", "template", "generation", "api", "sdk"],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}
