@@ -4,12 +4,22 @@
   "description": "Official Node.js/TypeScript SDK for DocumentStack PDF generation API",
   "author": "DocumentStack Team",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/documentstack/sdk-node.git"
   },
   "homepage": "https://documentstack.dev/docs/sdk/node",
-  "keywords": ["pdf", "document", "template", "generation", "api", "sdk"],
+  "keywords": [
+    "pdf",
+    "document",
+    "template",
+    "generation",
+    "api",
+    "sdk"
+  ],
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -26,7 +36,11 @@
       }
     }
   },
-  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
